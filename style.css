@@ -1,0 +1,484 @@
+/*
+4-Digit Code Breaker Game - styleSheet
+Banner ID: 001501763
+Name: Edzhe Veli
+Course ID: COMP1950
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*base styles and rreset*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1a1a2e;
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+
+}
+
+.container {
+    max-width: 500 px;
+    margin: 0 auto;
+    background-color: #16213e;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+header h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #e94560;
+    margin-bottom: 10px; 
+}
+
+header p {
+    text-align: center;
+    color: #a0a0a0;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/*how to play section*/
+.how-to-play {
+    background-color: #0f3460;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-left: 4px solid #4ecca3;
+}
+
+.how-to-play h2 {
+    font-size: 16px;
+    color: #4ecca3;
+    margin-bottom: 10px;
+}
+
+.how-to-play ul {
+    list-style: none;
+    padding: 0;
+}
+
+.how-to-play > ul > li {
+    font-size: 13px;
+    color: #d0d0d0;
+    margin-bottom: 8px;
+    padding-left: 10px;
+}
+
+.how-to-play ul ul {
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+.how-to-play ul ul li {
+    font-size: 12px;
+    color: #a0a0a0;
+    margin-bottom: 4px;
+}
+
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.info-box {
+    flex: 1;
+    background-color: #0f3460;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.label {
+    display: block;
+    font-size: 12px;
+    color: #a0a0a0;
+    margin-bottom: 5px;
+}
+
+.info-box.value {
+ font-size: 24px;
+ font-weight: bold;
+ color: #4ecca3;
+}
+
+.secret-code p{
+    background-color: #0f3460;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid #f39c12;
+}
+
+.code-display {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.code-digit {
+    width: 40px;
+    height: 50px;
+    background-color: #f39c12;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #1a1a2e;
+}
+
+.digit-pickers {
+    display:flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.digit-picker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+/*up-down buttons*/
+.picker-btn {
+    width: 50px;
+    height: 30px;
+    background-color: #0f3460;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.picker-btn:hover {
+background-color: #4ecca3;
+color:#1a1a2e;
+}
+
+.digit-display{
+    width: 50px;
+    height: 60px;
+    background-color: #1a1a2e;
+    border: 2px solid #4ecca3;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #4ecca3;
+}
+
+.actions-buttons {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.btn-primary {
+    background-color: #4ecca3;
+    color: #1a1a2e;
+}
+
+.btn-primary:hover {
+background-color: #3db892;
+}
+
+.btn-secondary {
+    background-color: #0f3460;
+    color: white;
+    border: 1px solid #4ecca3;
+}
+
+.btn-secondary:hover {
+    background-color: #1a4a7a;
+}
+
+.btn-success {
+    background-color: #27ae60;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #219a52;
+}
+
+/*game messages*/
+
+.game-message {
+    background-color: #0f3460;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    min-height: 50px;
+}
+
+.game-message.success {
+    background-color: rgba(39, 174, 96, 0.2);
+    border: 1px solid #27ae60;
+    color: #27ae60;
+}
+
+.game-message.error {
+    background-color: rgba(233,69,96,0.2);
+    border: 1px solid #e94560;
+    color: #e94560;
+}
+
+.attempts-section {
+background-color: #0f3460;
+padding: 15px;
+border-radius: 10px;
+}
+
+.attempts-section h2 {
+    font-size: 14px;
+    color: #a0a0a0;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.attempts-list {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.attempt-row {
+    display: felx;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: #1a1a2e;
+    border-radius: 8px;
+}
+
+.attempt-number {
+    color: #a0a0a0;
+    font-size: 12px;
+    width: 30px;
+}
+
+.attempt-digits {
+    display: flex;
+    gap: 5px;
+}
+
+.attempt-digit {
+    width: 30px;
+    height: 35px;
+    background-color: #0f3460;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/*pegs*/
+
+.pegs-container {
+    display: flex;
+    gap: 4px;
+}
+
+.peg {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+.peg-black {
+    background-color: #1a1a2e;
+    border: 2px solid white;
+}
+
+.peg-white {
+    background-color: white;
+}
+
+.peg-empty {
+    background-color: #0f3460;
+    border: 1px solid #a0a0a0;
+}
+
+/*scores*/
+.highscores-section {
+    background-color: #0f3460;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.highscores-section h2 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/*scores list*/
+.highscores-list {
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+/*scor lines*/
+.highscore-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    margin-bottom: 5px;
+    background-color: #1a1a2e;
+    border-radius: 5px;
+}
+
+.highscore-rank {
+    width: 25px;
+    font-weight: bold;
+}
+
+.highscore-rank.gold {
+    color: #f1c40f;
+}
+
+.highscore-rank.silver {
+    color: #bdc3c7;
+}
+
+.highscore-rank.bronze {
+    color: #cd6133;
+}
+
+.highscore-info {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.highscore-name {
+    font-weight: bold;
+    color: white;
+}
+
+.highscore-details {
+    font-size: 11px;
+    color: #a0a0a0;
+}
+
+.highscore-score {
+    color: #4ecca3;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.empty-scores {
+    text-align: center;
+    color: #a0a0a0;
+    font-size: 14px;
+    padding: 20px;
+}
+
+/*modal display functions*/
+.modal {
+    display:none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.modal-content {
+    background-color: #16213e;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 350px;
+    width: 90%;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #4ecca3;
+    border-radius: 8px;
+    background-color: #1a1a2e;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.modal-content input:focus {
+    outline: none;
+    border-color: #e94560;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+/*hidden element*/
+.hidden {
+    display: none;
+}
+
+/*mobile settings*/
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+    header h1 {
+        font-size: 22px;
+    }
+    .picker-btn {
+        width: 40px;
+        height: 25px;
+    }
+    .digit-display {
+        width: 40px;
+        height: 50px;
+        font-size: 22px;
+    }
+    .btn {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
